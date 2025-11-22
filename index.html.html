@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORIGINS | 官方網站概念設計</title>
+    <style>
+        /* CSS Reset and Basic Styles */
+        body {
+            font-family: Arial, "Microsoft YaHei", "微軟正黑體", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; /* 接近圖片底色的淺色 */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .origins-header {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            background-color: white;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Navigation Bar Styles */
+        .origins-nav {
+            display: flex;
+            justify-content: center;
+            background-color: white;
+            border-bottom: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: sticky; /* 讓導航欄固定在頂部 */
+            top: 0;
+            z-index: 1000;
+        }
+
+        .origins-nav a {
+            padding: 15px 30px;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            white-space: nowrap; /* 防止換行 */
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        /* 模擬圖片中的活動/選中狀態 */
+        .origins-nav a.active {
+            color: #4a8d3e; /* 綠色，可調整 */
+            font-weight: bold;
+        }
+
+        .origins-nav a.active::after {
+            content: '';
+            position: absolute;
+            left: 15px;
+            right: 15px;
+            bottom: 0;
+            height: 3px;
+            background-color: #4a8d3e;
+        }
+
+        /* Content Area */
+        .content-wrapper {
+            max-width: 1200px; /* 限制內容寬度 */
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* 內容區塊，預設隱藏 */
+        .content-section {
+            display: none;
+            min-height: 80vh; /* 確保內容區塊有最小高度 */
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* 選中的內容區塊顯示 */
+        .content-section.active {
+            display: block;
+        }
+
+        /* --- 內部圖片/內容樣式範例 (請根據實際需求調整) --- */
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            padding: 40px 0;
+            font-weight: normal;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 400px;
+            background-color: #eee;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #999;
+            font-style: italic;
+        }
+
+        .full-width-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 針對第一頁的 About Us 圖片特別處理，使用您上傳的圖片 */
+        .about-us-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            /* 這裡假設您可以將圖片命名為 about-us.jpg 並放在同一個資料夾 */
+            /* 如果無法顯示，請將這裡的圖片路徑替換成您實際的路徑 */
+        }
+        
+        /* 針對其他頁面的圖片，建議使用 `div` 或 `img` 標籤並調整樣式 */
+
+    </style>
+</head>
+<body>
+
+    <div class="origins-header">ORIGINS</div>
+
+    <div class="origins-nav">
+        <a href="javascript:void(0);" class="nav-link active" data-target="new-products">新品上市</a>
+        <a href="javascript:void(0);" class="nav-link" data-target="bestsellers">熱銷排行</a>
+        <a href="javascript:void(0);" class="nav-link" data-target="skincare">護膚</a>
+        <a href="javascript:void(0);" class="nav-link" data-target="member">會員優惠</a>
+        <a href="javascript:void(0);" class="nav-link" data-target="consultation">保養諮詢</a>
+        <a href="javascript:void(0);" class="nav-link" data-target="about-us">關於我們</a>
+    </div>
+
+    <div class="content-wrapper">
+
+        <div id="new-products" class="content-section active">
+            <h2 class="section-title">新品上市</h2>
+            <img src="新品優惠_工作區域 1.jpg" alt="新品上市頁面內容" class="full-width-image">
+        </div>
+
+        <div id="bestsellers" class="content-section">
+            <h2 class="section-title">熱銷保養品推薦</h2>
+            <img src="熱銷排行_工作區域 1.jpg" alt="熱銷排行頁面內容" class="full-width-image">
+        </div>
+
+        <div id="skincare" class="content-section">
+            <h2 class="section-title">解決您的困擾</h2>
+            <img src="設計概念圖-護膚3_工作區域 1.jpg" alt="護膚頁面內容" class="full-width-image">
+        </div>
+
+        <div id="member" class="content-section">
+            <h2 class="section-title">點數兌換貨</h2>
+            <img src="設計概念圖-會員優惠4_工作區域 1.jpg" alt="會員優惠頁面內容" class="full-width-image">
+        </div>
+
+        <div id="consultation" class="content-section">
+            <h2 class="section-title">保養知識專欄</h2>
+            <img src="設計概念圖-保養諮詢5_工作區域 1.jpg" alt="保養諮詢頁面內容" class="full-width-image">
+        </div>
+
+        <div id="about-us" class="content-section">
+            <h2 class="section-title">關於我們</h2>
+            <img src="設計概念圖-關於我們6_工作區域 1.jpg" alt="關於我們頁面內容" class="full-width-image">
+        </div>
+
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const contentSections = document.querySelectorAll('.content-section');
+
+            // 處理點擊事件
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('data-target');
+
+                    // 1. 移除所有導航項目的 active 類別，並將當前點擊的設為 active
+                    navLinks.forEach(item => item.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // 2. 隱藏所有內容區塊
+                    contentSections.forEach(section => section.classList.remove('active'));
+
+                    // 3. 顯示目標內容區塊
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                        // 滾動到頂部，模擬頁面切換
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
